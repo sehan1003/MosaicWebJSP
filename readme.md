@@ -13,14 +13,18 @@
 	
 	-Remote Repository 생성(github)
 	-Local Repository 생성
-		>>gradle build
-		>>dir /A > .gitignore
-		>>notepade .gitignore
-		>>git init
-		>>git add *
-		>>git commit -m "first commit"
+		- >>git status
+		- >>git log
+		- >>gradle build
+		- >>dir /A > .gitignore
+		- >>notepade .gitignore
+		- >>git init
+		- >>git add *
+		- >>git commit -m "first commit"
 		
 	-Local ==> Remote push(최초 동기화)
-		>>git remote add origin https://github.com/sehan1003/MosaicWeb.git
-		>>git push -u origin master
+		- >>git remote -v
+		- >>git remote remove origin  ==> origin이라는 이름을 가진 Repository를 삭제.
+		- >>git remote add origin https://github.com/sehan1003/MosaicWeb.git
+		- >>git push -u origin master
 	
