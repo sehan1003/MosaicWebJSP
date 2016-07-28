@@ -7,6 +7,8 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		//3. reload 기능 설정		
+		classpath("org.springframework:springloaded:1.2.6.RELEASE")
 	}
 }
 
@@ -37,9 +39,10 @@ dependencies {
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
 	//1.jsp설정
-	compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
+	providedRuntime group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'
+	//2. Reload 기능 설정
+	providedRuntime group: 'org.springframework', name: 'springloaded', version: '1.2.6.RELEASE'
 }
-
 
 eclipse {
 	classpath {
