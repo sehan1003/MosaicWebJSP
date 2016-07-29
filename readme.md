@@ -102,8 +102,8 @@
 	- Firefox ==> http://localhost/MosaicWeb/index.html
 	
 9. Gluon 설정
-	- cp FXTemplate/src MosaicWeb/src
+	- cp FXTemplate/src/main -> MosaicWeb/src/main 에 복사하면 gluon과 spring이 합쳐짐
 	- merge FXTemplate/build.gradle MosaicWeb/build.gradle
-	-
-	-
+	- merge com.hybrid.fx.MainApplication com.hybrid.MosaicWebApplication
+	- 
 	
