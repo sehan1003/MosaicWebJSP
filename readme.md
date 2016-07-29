@@ -94,3 +94,16 @@
     - notepad src/main/java/com/hybird/domain/Dept.java
     - notepad src/test/java/com/hybrid/mapper/DeptMapperTest.java
     - notepad src/main/webapp/dept.jsp
+    
+8. Deploy 방법
+	- gradle war
+	- build/libs/MosaicWeb~~~.war
+	- cp MosaicWeb.war C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps에 복사
+	- Firefox ==> http://localhost/MosaicWeb/index.html
+	
+9. Gluon 설정
+	- cp FXTemplate/src MosaicWeb/src
+	- merge FXTemplate/build.gradle MosaicWeb/build.gradle
+	-
+	-
+	
