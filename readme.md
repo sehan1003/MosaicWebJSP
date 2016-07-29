@@ -45,7 +45,7 @@
 	- build.gradle dependency : jasper
 		// https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-jasper
 		compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.4'    == > build.gradle에 설정
-	- gradle reflesh해주면 됩니다.
+	- Eclipse Gradle Reflesh 수행
 	- notepad src/main/webapp/Hello.jsp
 	- gradle bootRun
 	- Firefox ==> http://localhost:8080/Hello.jsp
@@ -66,8 +66,31 @@
 		classpath("org.springframework:springloaded:1.2.6.RELEASE")
 		// https://mvnrepository.com/artifact/org.springframework/springloaded
 		compile group: 'org.springframework', name: 'springloaded', version: '1.2.6.RELEASE'
+	- Eclipse Gradle Reflesh 수행
 		
 '1.2.6.RELEASE'
 	- Eclipse Output Directory 변경
 		bin 지우고 ==> build/classes/main
-	
+		
+
+7. Mybatis 설정 (DB를 위한 설정)
+	- mvnrepository.com >> search : spring boot mybatis
+	- build.gradle에 Dependency 설정
+	// https://mvnrepository.com/artifact/org.mybatis.spring.boot/mybatis-spring-boot-starter
+	compile group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter', version: '1.1.1'
+	- Eclipse Gradle Reflesh 수행
+	- gradle bootRun  하면 오류!
+	- application.properties에서 설정
+		#
+		#	DataSource
+		#
+		spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+		spring.datasource.url=jdbc:oracle:thin:@52.78.48.117:1521:orcl
+		spring.datasource.username=scott
+		spring.datasource.password=tiger
+	- build.gradle에서 providedRuntime files('src/main/webapp/WEB-INF/lib/ojdbc7.jar'); 설정
+	- gradle bootRun
+	- notepad src/main/java/com/hybrid/mapper/DeptMapper.java 인터페이스 생성
+    - notepad src/main/java/com/hybird/domain/Dept.java
+    - notepad src/test/java/com/hybrid/mapper/DeptMapperTest.java
+    - notepad src/main/webapp/dept.jsp
