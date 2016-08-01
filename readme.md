@@ -102,8 +102,10 @@
 	- Firefox ==> http://localhost/MosaicWeb/index.html
 	
 9. Gluon 설정
-	- cp FXTemplate/src/main -> MosaicWeb/src/main 에 복사하면 gluon과 spring이 합쳐짐
-	- merge FXTemplate/build.gradle MosaicWeb/build.gradle
-	- merge com.hybrid.fx.MainApplication com.hybrid.MosaicWebApplication
-	- 
+	- cp FXTemplate/src/*  main 복사해서 붙여넣기  ==>   MosaicWeb/ src    
+	- merge FXTempliate/build.gradle MosaicWeb/build.gradle
+	- merge com.hybrid.fx.MainApllication com.hybrid.MosaicWebApplication
+		->> spring boot + gluon start
+		->> spring boot + gluon stop
+		->> PrimaryView 에 WebView 추가
 	
