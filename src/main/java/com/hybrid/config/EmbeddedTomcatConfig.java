@@ -24,7 +24,20 @@ public class EmbeddedTomcatConfig implements EmbeddedServletContainerCustomizer 
             error404Page.setErrorCode(404);
             error404Page.setLocation("/WEB-INF/error/404.jsp");
             context.addErrorPage(error404Page);
-         
+            
+            ErrorPage errorArithmeticPage = new ErrorPage();
+            
+            errorArithmeticPage.setExceptionType("java.lang.ArithmeticException");
+            errorArithmeticPage.setLocation("/WEB-INF/error/arithemtic.jsp");
+            
+            context.addErrorPage(errorArithmeticPage);
+//            
+//            ErrorPage error500Page = new ErrorPage();
+//            
+//            error500Page.setErrorCode(500);
+//            error500Page.setLocation("/WEB-INF/error/500.jsp");
+//            context.addErrorPage(error500Page);
+//            
          }
       });
       
