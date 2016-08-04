@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +9,16 @@
 </head>
 <body>
 	<h1>설정 확인</h1>
+
+<hr>
 <ol>
    <li><a href="Hello.html"> HTML 확인 </a></li>
    <li><a href="Hello.jsp"> JSP 확인</a></li>
    <li><a href="HelloServlet"> HelloServlet 확인 </a></li>
-   <li><a href="dept.jsp"> Mybatis  확인</a></li>
-   <li><a href="chap05/bufferinfo.jsp"> buffer 확인 </a></li>
-   <li><a href="chap05/readinitParameter.jsp"> readinitParameter  확인 </a></li>
-   <li><a href="chap05/usePageContext.jsp"> usePageContext  확인 </a></li>
-   <li><a href="chap05/veiwServerInfo.jsp"> veiwServerInfo  확인 </a></li>
-   <li><a href="chap07/layout.jsp">Chap07 include와 jsp:include 차이</a>
+   <li><a href="Dept.jsp"> Mybatis  확인</a></li>
+   <li><a href="cookie/Dept.jsp">Cookie</a>
+	<li><a href="session/Dept.jsp">Session Login</a></li>
+	<li><a href="logout.jsp">Logout</a></li>
 </ol>
 
 </body>

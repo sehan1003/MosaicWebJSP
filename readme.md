@@ -117,3 +117,11 @@
 	- builder.addDecoratorPath("/deco", "/WEB-INF/deco/maindeco.jsp");
 	
 	
+11. Spring Security 설정
+	- mvnrepository.com  >> search : spring boot security/ spring security taglibs
+	- build.gradle dependecies 추가
+		->> compile('org.springframework.boot:spring-boot-starter-security') //spring-boot-starter-tomcat과 버전이 같아야함.
+		->> compile group: 'org.springframework.security', name: 'spring-security-taglibs', version: '4.0.4.RELEASE' //spring-security-config/web과 버전이 같아야함
+	
+	
+	

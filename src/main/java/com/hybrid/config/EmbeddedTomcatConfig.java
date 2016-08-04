@@ -19,6 +19,15 @@ public class EmbeddedTomcatConfig implements EmbeddedServletContainerCustomizer 
          
          @Override
          public void customize(Context context) {
+        	 
+        	 /*
+              * Welcome File
+              */
+            context.addWelcomeFile("index.jsp");
+           
+            /*
+             * Error Page
+             */
             ErrorPage error404Page = new ErrorPage();
             
 //            error404Page.setErrorCode(404);
